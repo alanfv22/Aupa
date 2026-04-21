@@ -28,11 +28,10 @@ export function Header() {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border/50"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? "bg-[#EAF0FF]/95 backdrop-blur-md shadow-sm border-b border-[#C7D2F8]/50"
+          : "bg-[#EAF0FF]"
+        }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -56,7 +55,7 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                className="text-[#1A1A2E] hover:text-[#3B5BDB] transition-colors font-medium"
               >
                 {link.label}
               </a>
@@ -77,7 +76,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-[#1A1A2E]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -90,7 +89,7 @@ export function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className="md:hidden bg-background border-t border-border"
+            className="md:hidden bg-[#EAF0FF] border-t border-[#C7D2F8]"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -101,7 +100,7 @@ export function Header() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                  className="text-[#1A1A2E] hover:text-[#3B5BDB] transition-colors font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}

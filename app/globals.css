@@ -4,61 +4,78 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #F8F6FF;
-  --foreground: oklch(0.2 0.02 250);
-  --card: #F8F6FF;
-  --card-foreground: oklch(0.2 0.02 250);
-  --popover: #F8F6FF;
-  --popover-foreground: oklch(0.2 0.02 250);
-  --section-alt: #EEF2FF;
-  --primary: oklch(0.55 0.2 260);
-  --primary-foreground: oklch(0.98 0.01 230);
-  --secondary: oklch(0.96 0.01 230);
-  --secondary-foreground: oklch(0.2 0.02 250);
-  --muted: oklch(0.96 0.01 230);
-  --muted-foreground: oklch(0.5 0.02 250);
-  --accent: oklch(0.7 0.18 50);
-  --accent-foreground: oklch(0.98 0.01 230);
+  /* FONDO PRINCIPAL: beige/arena cálido — el tono marrón clarito del IG */
+  --background: #F5EDE3;
+  --foreground: #1A1A2E;
+
+  --card: #F5EDE3;
+  --card-foreground: #1A1A2E;
+  --popover: #F5EDE3;
+  --popover-foreground: #1A1A2E;
+
+  /* SECCIÓN ALTERNATIVA: azul muy suave */
+  --section-alt: #EAF0FF;
+
+  --primary: #3B5BDB;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #EAF0FF;
+  --secondary-foreground: #1A1A2E;
+
+  --muted: #E8DDD4;
+  --muted-foreground: #6B6B7B;
+
+  /* ACENTO: naranja/coral del logo */
+  --accent: #F4845F;
+  --accent-foreground: #FFFFFF;
+
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.98 0.01 230);
-  --border: oklch(0.9 0.01 230);
-  --input: oklch(0.9 0.01 230);
-  --ring: oklch(0.55 0.2 260);
-  --chart-1: oklch(0.55 0.2 260);
-  --chart-2: oklch(0.7 0.18 50);
-  --chart-3: oklch(0.65 0.15 200);
-  --chart-4: oklch(0.75 0.15 150);
-  --chart-5: oklch(0.6 0.2 30);
+  --destructive-foreground: #FFFFFF;
+
+  --border: #DDD0C4;
+  --input: #DDD0C4;
+  --ring: #3B5BDB;
+
+  --chart-1: #3B5BDB;
+  --chart-2: #F4845F;
+  --chart-3: #65C3BA;
+  --chart-4: #94D82D;
+  --chart-5: #F59F00;
+
   --radius: 0.75rem;
-  
+
   /* AUPA Custom Colors */
-  --aupa-blue: oklch(0.55 0.2 260);
-  --aupa-orange: oklch(0.7 0.18 50);
-  --aupa-coral: oklch(0.68 0.18 25);
-  --aupa-sky: oklch(0.7 0.15 220);
-  --aupa-cream: oklch(0.98 0.01 90);
+  --aupa-blue: #3B5BDB;
+  --aupa-blue-light: #EAF0FF;
+  --aupa-orange: #F4845F;
+  --aupa-coral: #E8735A;
+  --aupa-beige: #F5EDE3;
+  --aupa-beige-dark: #E8DDD4;
+  --aupa-cream: #FDF8F4;
+  --aupa-sky: #C7D2F8;
 }
 
 .dark {
-  --background: oklch(0.15 0.02 250);
-  --foreground: oklch(0.98 0.01 230);
-  --card: oklch(0.18 0.02 250);
-  --card-foreground: oklch(0.98 0.01 230);
-  --popover: oklch(0.18 0.02 250);
-  --popover-foreground: oklch(0.98 0.01 230);
-  --primary: oklch(0.6 0.2 260);
-  --primary-foreground: oklch(0.98 0.01 230);
-  --secondary: oklch(0.25 0.02 250);
-  --secondary-foreground: oklch(0.98 0.01 230);
-  --muted: oklch(0.25 0.02 250);
-  --muted-foreground: oklch(0.7 0.02 250);
-  --accent: oklch(0.7 0.18 50);
-  --accent-foreground: oklch(0.98 0.01 230);
+  --background: #1A1A2E;
+  --foreground: #F5EDE3;
+  --card: #1E1E35;
+  --card-foreground: #F5EDE3;
+  --popover: #1E1E35;
+  --popover-foreground: #F5EDE3;
+  --primary: #5B7BFF;
+  --primary-foreground: #FFFFFF;
+  --secondary: #2A2A45;
+  --secondary-foreground: #F5EDE3;
+  --muted: #2A2A45;
+  --muted-foreground: #A0A0B8;
+  --accent: #F4845F;
+  --accent-foreground: #FFFFFF;
   --destructive: oklch(0.5 0.2 25);
-  --destructive-foreground: oklch(0.98 0.01 230);
-  --border: oklch(0.25 0.02 250);
-  --input: oklch(0.25 0.02 250);
-  --ring: oklch(0.6 0.2 260);
+  --destructive-foreground: #FFFFFF;
+  --border: #2A2A45;
+  --input: #2A2A45;
+  --ring: #5B7BFF;
+  --section-alt: #1E2A4A;
 }
 
 @theme inline {
@@ -90,10 +107,13 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
   --color-aupa-blue: var(--aupa-blue);
+  --color-aupa-blue-light: var(--aupa-blue-light);
   --color-aupa-orange: var(--aupa-orange);
   --color-aupa-coral: var(--aupa-coral);
-  --color-aupa-sky: var(--aupa-sky);
+  --color-aupa-beige: var(--aupa-beige);
+  --color-aupa-beige-dark: var(--aupa-beige-dark);
   --color-aupa-cream: var(--aupa-cream);
+  --color-aupa-sky: var(--aupa-sky);
   --color-section-alt: var(--section-alt);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -105,31 +125,56 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
-/* Smooth scroll behavior */
+/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
 /* Custom animations */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes pulse-soft {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
 }
 
 @keyframes wave {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(20deg); }
-  75% { transform: rotate(-15deg); }
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(20deg);
+  }
+
+  75% {
+    transform: rotate(-15deg);
+  }
 }
 
 .animate-float {

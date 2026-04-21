@@ -11,7 +11,6 @@ const plans = [
     description: "Vení un sábado a conocernos. De 10 a 16hs. Sin compromiso.",
     features: [],
     color: "border-green-500",
-    badgeColor: "bg-green-500",
     badge: null,
     highlighted: false,
   },
@@ -27,7 +26,6 @@ const plans = [
       "Actividades al aire libre",
     ],
     color: "border-primary",
-    badgeColor: "bg-primary",
     badge: "Más elegido",
     highlighted: true,
   },
@@ -38,7 +36,6 @@ const plans = [
     description: "Elegí el taller que más le guste a tu hijo/a.",
     features: [],
     color: "border-accent",
-    badgeColor: "bg-accent",
     badge: null,
     highlighted: false,
   },
@@ -53,7 +50,7 @@ export function Pricing() {
   };
 
   return (
-    <section id="aranceles" className="py-24 bg-section-alt">
+    <section id="aranceles" className="py-24 bg-[#F5EDE3]">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-16"
@@ -74,27 +71,26 @@ export function Pricing() {
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
-              className={`relative bg-card rounded-2xl p-8 shadow-lg border-2 ${plan.color} ${
-                plan.highlighted ? "scale-105 shadow-2xl" : ""
-              }`}
+              className={`relative bg-[#FDF8F4] rounded-2xl p-8 shadow-lg border-2 ${plan.color} ${plan.highlighted ? "scale-105 shadow-2xl" : ""
+                }`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               {plan.badge && (
-                <div className={`absolute -top-3 left-1/2 -translate-x-1/2 ${plan.badgeColor} text-white text-sm font-medium px-4 py-1 rounded-full`}>
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-sm font-medium px-4 py-1 rounded-full">
                   {plan.badge}
                 </div>
               )}
-              
+
               <h3 className="text-xl font-bold text-foreground mb-2">{plan.name}</h3>
               <div className="mb-4">
                 <span className="text-3xl md:text-4xl font-bold text-foreground">{plan.price}</span>
                 {plan.period && <span className="text-muted-foreground">{plan.period}</span>}
               </div>
               <p className="text-muted-foreground mb-6 text-sm">{plan.description}</p>
-              
+
               {plan.features.length > 0 && (
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
@@ -105,14 +101,13 @@ export function Pricing() {
                   ))}
                 </ul>
               )}
-              
+
               <Button
                 onClick={scrollToForm}
-                className={`w-full rounded-xl ${
-                  plan.highlighted
+                className={`w-full rounded-xl ${plan.highlighted
                     ? "bg-primary hover:bg-primary/90 text-white"
-                    : "bg-secondary hover:bg-secondary/80 text-foreground"
-                }`}
+                    : "bg-[#E8DDD4] hover:bg-[#DDD0C4] text-foreground"
+                  }`}
               >
                 Agendá tu visita
               </Button>
