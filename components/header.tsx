@@ -10,7 +10,7 @@ const navLinks = [
   { href: "#quienes-somos", label: "Quiénes Somos" },
   { href: "#talleres", label: "Talleres" },
   { href: "#galeria", label: "Galería" },
-  { href: "#inscripcion", label: "Inscripción" },
+  { href: "#agendar", label: "Inscripción" },
   { href: "#contacto", label: "Contacto" },
 ];
 
@@ -29,8 +29,8 @@ export function Header() {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-[#EAF0FF]/95 backdrop-blur-md shadow-sm border-b border-[#C7D2F8]/50"
-          : "bg-[#EAF0FF]"
+        ? "bg-[#EAF0FF]/95 backdrop-blur-md shadow-sm border-b border-[#C7D2F8]/50"
+        : "bg-[#EAF0FF]"
         }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
