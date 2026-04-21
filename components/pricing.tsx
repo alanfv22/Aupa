@@ -50,7 +50,7 @@ export function Pricing() {
   };
 
   return (
-    <section id="aranceles" className="py-24 bg-[#F5EDE3]">
+    <section id="aranceles" className="py-24 bg-[#DBEAFE]">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-16"
@@ -62,7 +62,7 @@ export function Pricing() {
           <span className="inline-block text-primary font-medium text-sm uppercase tracking-wider mb-4">
             Aranceles
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-heading">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A1A2E] mb-6 font-heading">
             Nuestros Aranceles
           </h2>
         </motion.div>
@@ -71,7 +71,7 @@ export function Pricing() {
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
-              className={`relative bg-[#FDF8F4] rounded-2xl p-8 shadow-lg border-2 ${plan.color} ${plan.highlighted ? "scale-105 shadow-2xl" : ""
+              className={`relative bg-[#F4F7FF] rounded-2xl p-8 shadow-lg border-2 ${plan.color} ${plan.highlighted ? "scale-105 shadow-2xl" : ""
                 }`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -84,17 +84,17 @@ export function Pricing() {
                 </div>
               )}
 
-              <h3 className="text-xl font-bold text-foreground mb-2">{plan.name}</h3>
+              <h3 className="text-xl font-bold text-[#1A1A2E] mb-2">{plan.name}</h3>
               <div className="mb-4">
-                <span className="text-3xl md:text-4xl font-bold text-foreground">{plan.price}</span>
-                {plan.period && <span className="text-muted-foreground">{plan.period}</span>}
+                <span className="text-3xl md:text-4xl font-bold text-[#1A1A2E]">{plan.price}</span>
+                {plan.period && <span className="text-[#5A6A8A]">{plan.period}</span>}
               </div>
-              <p className="text-muted-foreground mb-6 text-sm">{plan.description}</p>
+              <p className="text-[#5A6A8A] mb-6 text-sm">{plan.description}</p>
 
               {plan.features.length > 0 && (
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <li key={idx} className="flex items-start gap-2 text-sm text-[#5A6A8A]">
                       <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
@@ -106,7 +106,7 @@ export function Pricing() {
                 onClick={scrollToForm}
                 className={`w-full rounded-xl ${plan.highlighted
                     ? "bg-primary hover:bg-primary/90 text-white"
-                    : "bg-[#E8DDD4] hover:bg-[#DDD0C4] text-foreground"
+                    : "bg-[#C7D2F8] hover:bg-[#A5B4FC] text-[#1A1A2E]"
                   }`}
               >
                 Agendá tu visita
@@ -116,7 +116,7 @@ export function Pricing() {
         </div>
 
         <motion.p
-          className="text-center text-sm text-muted-foreground mt-8"
+          className="text-center text-sm text-[#5A6A8A] mt-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

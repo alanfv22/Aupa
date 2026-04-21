@@ -4,36 +4,44 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* FONDO PRINCIPAL: beige/arena cálido — el tono marrón clarito del IG */
-  --background: #F5EDE3;
+  /* FONDO PRINCIPAL: azul muy suave */
+  --background: #EAF0FF;
   --foreground: #1A1A2E;
 
-  --card: #F5EDE3;
+  --card: #F4F7FF;
   --card-foreground: #1A1A2E;
-  --popover: #F5EDE3;
+  --popover: #F4F7FF;
   --popover-foreground: #1A1A2E;
 
-  /* SECCIÓN ALTERNATIVA: azul muy suave */
-  --section-alt: #EAF0FF;
+  /* SECCIONES — distintos tonos para alternar */
+  --section-1: #EAF0FF;
+  /* azul suave — Hero, Objetivos, Formulario */
+  --section-2: #DBEAFE;
+  /* azul medio — Misión, Aranceles */
+  --section-3: #F0F4FF;
+  /* azul casi blanco — Talleres, Schedule */
+  --section-4: #F5EDE3;
+  /* beige cálido — SOLO Quiénes somos */
+  --section-alt: #DBEAFE;
+  /* alias para compatibilidad con componentes existentes */
 
   --primary: #3B5BDB;
   --primary-foreground: #FFFFFF;
 
-  --secondary: #EAF0FF;
+  --secondary: #C7D2F8;
   --secondary-foreground: #1A1A2E;
 
-  --muted: #E8DDD4;
-  --muted-foreground: #6B6B7B;
+  --muted: #D6E0FF;
+  --muted-foreground: #5A6A8A;
 
-  /* ACENTO: naranja/coral del logo */
   --accent: #F4845F;
   --accent-foreground: #FFFFFF;
 
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: #FFFFFF;
 
-  --border: #DDD0C4;
-  --input: #DDD0C4;
+  --border: #C7D2F8;
+  --input: #D6E0FF;
   --ring: #3B5BDB;
 
   --chart-1: #3B5BDB;
@@ -47,25 +55,27 @@
   /* AUPA Custom Colors */
   --aupa-blue: #3B5BDB;
   --aupa-blue-light: #EAF0FF;
+  --aupa-blue-mid: #DBEAFE;
+  --aupa-blue-pale: #F0F4FF;
+  --aupa-sky: #C7D2F8;
   --aupa-orange: #F4845F;
   --aupa-coral: #E8735A;
   --aupa-beige: #F5EDE3;
   --aupa-beige-dark: #E8DDD4;
-  --aupa-cream: #FDF8F4;
-  --aupa-sky: #C7D2F8;
+  --aupa-cream: #F4F7FF;
 }
 
 .dark {
   --background: #1A1A2E;
-  --foreground: #F5EDE3;
+  --foreground: #EAF0FF;
   --card: #1E1E35;
-  --card-foreground: #F5EDE3;
+  --card-foreground: #EAF0FF;
   --popover: #1E1E35;
-  --popover-foreground: #F5EDE3;
+  --popover-foreground: #EAF0FF;
   --primary: #5B7BFF;
   --primary-foreground: #FFFFFF;
   --secondary: #2A2A45;
-  --secondary-foreground: #F5EDE3;
+  --secondary-foreground: #EAF0FF;
   --muted: #2A2A45;
   --muted-foreground: #A0A0B8;
   --accent: #F4845F;
@@ -75,6 +85,10 @@
   --border: #2A2A45;
   --input: #2A2A45;
   --ring: #5B7BFF;
+  --section-1: #1A1A2E;
+  --section-2: #1E2A4A;
+  --section-3: #151525;
+  --section-4: #2A2015;
   --section-alt: #1E2A4A;
 }
 
@@ -106,15 +120,21 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-section-1: var(--section-1);
+  --color-section-2: var(--section-2);
+  --color-section-3: var(--section-3);
+  --color-section-4: var(--section-4);
+  --color-section-alt: var(--section-alt);
   --color-aupa-blue: var(--aupa-blue);
   --color-aupa-blue-light: var(--aupa-blue-light);
+  --color-aupa-blue-mid: var(--aupa-blue-mid);
+  --color-aupa-blue-pale: var(--aupa-blue-pale);
+  --color-aupa-sky: var(--aupa-sky);
   --color-aupa-orange: var(--aupa-orange);
   --color-aupa-coral: var(--aupa-coral);
   --color-aupa-beige: var(--aupa-beige);
   --color-aupa-beige-dark: var(--aupa-beige-dark);
   --color-aupa-cream: var(--aupa-cream);
-  --color-aupa-sky: var(--aupa-sky);
-  --color-section-alt: var(--section-alt);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -131,12 +151,10 @@
   }
 }
 
-/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom animations */
 @keyframes float {
 
   0%,
@@ -190,7 +208,6 @@ html {
   transform-origin: 70% 70%;
 }
 
-/* Gallery hover effects */
 .gallery-image {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }

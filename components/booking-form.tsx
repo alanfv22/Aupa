@@ -60,7 +60,7 @@ export function BookingForm() {
   };
 
   return (
-    <section id="agendar" className="py-24 bg-[#F5EDE3]">
+    <section id="agendar" className="py-24 bg-[#EAF0FF]">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -75,7 +75,7 @@ export function BookingForm() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A1A2E] mb-6 font-heading">
             Agendá tu visita
           </h2>
-          <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-medium">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
             <Calendar className="w-4 h-4" />
             <span>Quedan 4 lugares este sábado</span>
           </div>
@@ -93,7 +93,7 @@ export function BookingForm() {
               <motion.form
                 key="form"
                 onSubmit={handleSubmit}
-                className="bg-[#FDF8F4] rounded-2xl p-8 shadow-lg border border-[#DDD0C4]"
+                className="bg-[#F4F7FF] rounded-2xl p-8 shadow-lg border border-[#C7D2F8]"
                 initial={{ opacity: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
               >
@@ -107,7 +107,7 @@ export function BookingForm() {
                       value={formData.fecha}
                       onChange={handleChange}
                       required
-                      className="w-full h-10 px-3 rounded-xl border border-[#DDD0C4] bg-[#FDF8F4] text-[#1A1A2E] focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full h-10 px-3 rounded-xl border border-[#C7D2F8] bg-[#F4F7FF] text-[#1A1A2E] focus:outline-none focus:ring-2 focus:ring-primary"
                     >
                       <option value="">Seleccioná una fecha</option>
                       {nextSaturdays.map((date) => (
@@ -127,7 +127,7 @@ export function BookingForm() {
                       value={formData.nombre}
                       onChange={handleChange}
                       required
-                      className="rounded-xl bg-[#FDF8F4] border-[#DDD0C4]"
+                      className="rounded-xl bg-[#F4F7FF] border-[#C7D2F8]"
                       placeholder="Tu nombre"
                     />
                   </div>
@@ -142,7 +142,7 @@ export function BookingForm() {
                       value={formData.whatsapp}
                       onChange={handleChange}
                       required
-                      className="rounded-xl bg-[#FDF8F4] border-[#DDD0C4]"
+                      className="rounded-xl bg-[#F4F7FF] border-[#C7D2F8]"
                       placeholder="+54 11 1234-5678"
                     />
                   </div>
@@ -157,7 +157,7 @@ export function BookingForm() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="rounded-xl bg-[#FDF8F4] border-[#DDD0C4]"
+                      className="rounded-xl bg-[#F4F7FF] border-[#C7D2F8]"
                       placeholder="tu@email.com"
                     />
                   </div>
@@ -171,7 +171,7 @@ export function BookingForm() {
                       value={formData.nombreChico}
                       onChange={handleChange}
                       required
-                      className="rounded-xl bg-[#FDF8F4] border-[#DDD0C4]"
+                      className="rounded-xl bg-[#F4F7FF] border-[#C7D2F8]"
                       placeholder="Nombre"
                     />
                   </div>
@@ -188,7 +188,7 @@ export function BookingForm() {
                       value={formData.edadChico}
                       onChange={handleChange}
                       required
-                      className="rounded-xl bg-[#FDF8F4] border-[#DDD0C4]"
+                      className="rounded-xl bg-[#F4F7FF] border-[#C7D2F8]"
                       placeholder="Edad"
                     />
                   </div>
@@ -205,7 +205,7 @@ export function BookingForm() {
                       value={formData.cantidadPersonas}
                       onChange={handleChange}
                       required
-                      className="rounded-xl bg-[#FDF8F4] border-[#DDD0C4]"
+                      className="rounded-xl bg-[#F4F7FF] border-[#C7D2F8]"
                       placeholder="Cantidad de personas que asistirán"
                     />
                   </div>
@@ -219,7 +219,7 @@ export function BookingForm() {
                       value={formData.mensaje}
                       onChange={handleChange}
                       rows={3}
-                      className="w-full px-3 py-2 rounded-xl border border-[#DDD0C4] bg-[#FDF8F4] text-[#1A1A2E] focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                      className="w-full px-3 py-2 rounded-xl border border-[#C7D2F8] bg-[#F4F7FF] text-[#1A1A2E] focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                       placeholder="Contanos lo que quieras..."
                     />
                   </div>
@@ -235,18 +235,18 @@ export function BookingForm() {
             ) : (
               <motion.div
                 key="success"
-                className="bg-[#FDF8F4] rounded-2xl p-12 shadow-lg border border-[#DDD0C4] text-center"
+                className="bg-[#F4F7FF] rounded-2xl p-12 shadow-lg border border-[#C7D2F8] text-center"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4 }}
               >
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <PartyPopper className="w-10 h-10 text-green-600" />
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <PartyPopper className="w-10 h-10 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#1A1A2E] mb-4">
                   ¡Genial! Te esperamos el {formatDate(selectedDate)}
                 </h3>
-                <p className="text-[#6B6B7B]">
+                <p className="text-[#5A6A8A]">
                   Pronto nos ponemos en contacto.
                 </p>
               </motion.div>
