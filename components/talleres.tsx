@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import Image from "next/image";
 
 const talleres = [
@@ -14,7 +15,7 @@ const talleres = [
   { name: "Actividades con caballos", color: "bg-accent", textColor: "text-white" },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -24,7 +25,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: {
     opacity: 1,
@@ -41,15 +42,16 @@ export function Talleres() {
     <section id="talleres" className="py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Image with overlay */}
+
+          {/* Image */}
           <motion.div
-            className="flex-1 relative"
+            className="w-full lg:flex-1"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative h-64 md:h-80 lg:h-[500px] w-full rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl lg:shadow-2xl">
+            <div className="relative w-full h-[260px] sm:h-[340px] lg:h-[500px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xiXzaVHp16gmC8Yts3IFWG0i830QGv.png"
                 alt="Nuestros talleres"
@@ -61,7 +63,7 @@ export function Talleres() {
 
           {/* Talleres bubbles */}
           <motion.div
-            className="flex-1"
+            className="w-full lg:flex-1"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -73,7 +75,7 @@ export function Talleres() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 font-heading">
               8 talleres para explorar
             </h2>
-            
+
             <motion.div
               className="flex flex-wrap gap-4"
               variants={containerVariants}
@@ -94,7 +96,7 @@ export function Talleres() {
             </motion.div>
 
             <p className="mt-8 text-muted-foreground leading-relaxed">
-              Cada taller está diseñado para potenciar habilidades únicas en un ambiente 
+              Cada taller está diseñado para potenciar habilidades únicas en un ambiente
               seguro, amoroso y lleno de diversión.
             </p>
           </motion.div>
